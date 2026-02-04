@@ -39,6 +39,7 @@ RUN chown -R node:node /app
 # This reduces the attack surface by preventing container escape via root privileges
 USER node
 
+# Install Feishu extension by default
 RUN ["node","dist/index.js","plugins","install","./extensions/feishu"]
 
 # Start gateway server with default config.
